@@ -172,6 +172,11 @@ Bu sayede kullanıcı deneyimi iyileştirilmiş, veri güvenliği artırılmış
 Kodlar; modülerlik, okunabilirlik ve sürdürülebilirlik ön planda tutularak **Clean Code** prensiplerine uygun yazılmıştır.
 Servis katmanı, DTO yapısı ve Controller mimarisi düzenli bir şekilde ayrıştırılmıştır.
 
+### 5. Proje Dökümanı
+
+Kaynak kod içerisinde bulunan **student-automation-document.pdf** içeriğinde projeye dair görsel içerikler ve proje kullanımı
+hakkında detaylı bilgi verilmektedir.
+
 ---
 
 ##  Entity Yapısı
