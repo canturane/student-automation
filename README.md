@@ -178,6 +178,12 @@ Servis katmanı, DTO yapısı ve Controller mimarisi düzenli bir şekilde ayrı
 ---
 ### 5. Entity Yapısı
 
+##  Veritabanı Şeması ve İlişkileri
+
+Entity Framework Core Code-First yaklaşımı ile tasarlanan veritabanı şeması, sistemin temelini oluşturur.  
+
+
+```mermaid
 erDiagram
     USER {
         int Id PK
@@ -185,7 +191,6 @@ erDiagram
         string PasswordHash
         enum Role
     }
-
     STUDENT {
         int Id PK
         int UserId FK
@@ -193,7 +198,6 @@ erDiagram
         string Surname
         string Number
     }
-
     TEACHER {
         int Id PK
         int UserId FK
@@ -201,27 +205,23 @@ erDiagram
         string Surname
         string Title
     }
-
     COURSE {
         int Id PK
         string Name
         enum Status
         int TeacherId FK
     }
-
     ENROLLMENT {
         int Id PK
         int CourseId FK
         int StudentId FK
     }
-
     GRADE {
         int Id PK
         int EnrollmentId FK
         decimal Score
         datetime CreatedAt
     }
-
     ATTENDANCE {
         int Id PK
         int EnrollmentId FK
@@ -230,15 +230,14 @@ erDiagram
     }
 
     %% Relations
-    USER ||--o| STUDENT : "has"
-    USER ||--o| TEACHER : "has"
+    USER ||--o| STUDENT : has
+    USER ||--o| TEACHER : has
+    TEACHER ||--o{ COURSE : teaches
+    COURSE ||--o{ ENROLLMENT : has
+    STUDENT ||--o{ ENROLLMENT : enrolled
+    ENROLLMENT ||--o{ GRADE : receives
+    ENROLLMENT ||--o{ ATTENDANCE : tracked
 
-    TEACHER ||--o{ COURSE : "teaches"
-    COURSE ||--o{ ENROLLMENT : "has"
-    STUDENT ||--o{ ENROLLMENT : "enrolled"
-
-    ENROLLMENT ||--o{ GRADE : "receives"
-    ENROLLMENT ||--o{ ATTENDANCE : "tracked"
 
 ---
 
