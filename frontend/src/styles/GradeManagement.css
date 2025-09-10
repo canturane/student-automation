@@ -1,0 +1,103 @@
+/* Sayfa kapsayıcı */
+.grade-page {
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Başlık */
+.grade-page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Course kartı */
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.course-card small {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Tablo */
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.grade-table thead {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.grade-table th,
+.grade-table td {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.grade-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.grade-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Input */
+.grade-table input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  width: 80px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.grade-table input:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+/* Buton */
+.grade-table button {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-table button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99,102,241,0.3);
+}
+
+/* "No students" mesajı */
+.grade-table td[colspan] {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
+}

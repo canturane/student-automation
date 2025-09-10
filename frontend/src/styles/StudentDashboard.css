@@ -1,0 +1,114 @@
+/* === Sayfa kapsayıcı === */
+.student-dashboard {
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #dbeafe 0%, #f0fdf4 100%);
+  min-height: 100vh;
+}
+
+/* Başlık */
+.student-dashboard h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+/* Profil kartı */
+.profile-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.profile-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.profile-card p {
+  font-size: 15px;
+  margin: 6px 0;
+  color: #374151;
+}
+
+.profile-card strong {
+  color: #1e3a8a;
+}
+
+/* Notlar bölümü */
+.grades-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* Tablo */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.grades-table th {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.grades-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+}
+
+.grades-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Score badge */
+.score-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.score-high {
+  background: #bbf7d0;
+  color: #166534;
+}
+.score-mid {
+  background: #bfdbfe;
+  color: #1e3a8a;
+}
+.score-low {
+  background: #fde68a;
+  color: #92400e;
+}
+.score-fail {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+/* Boş tablo mesajı */
+.grades-table td[colspan] {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+  font-style: italic;
+}

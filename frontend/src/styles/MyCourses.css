@@ -1,0 +1,167 @@
+/* Sayfa kapsayıcı */
+.my-courses-page {
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Başlık */
+.my-courses-page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Tablo */
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.courses-table th {
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.courses-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+}
+
+.courses-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Status select */
+.courses-table select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  cursor: pointer;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.courses-table select:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+/* Kaydet butonu */
+.courses-table button {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.courses-table button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.3);
+}
+
+/* Öğrenci listesi */
+.enrolled-students {
+  background: #f9fafb;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.enrolled-students strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #111827;
+}
+
+.enrolled-students ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enrolled-students li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enrolled-students li:last-child {
+  border-bottom: none;
+}
+
+.enrolled-students button {
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.enrolled-students button:hover {
+  color: #b91c1c;
+}
+
+/* Öğrenci ekleme */
+.add-student {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-student select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.add-student select:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+.add-student button {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-student button:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(34,197,94,0.3);
+}
