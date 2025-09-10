@@ -1,4 +1,7 @@
 
+
+---
+
 #  Öğrenci Otomasyon Sistemi
 
 ##  Proje Açıklaması
@@ -80,7 +83,7 @@ curl http://localhost:8080/health
 ```
 
 **Swagger UI:**
-👉 [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html)
+ [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html)
 
 ---
 
@@ -103,11 +106,11 @@ Frontend’i çalıştırın:
 npm run dev
 ```
 
-👉 [http://localhost:5173](http://localhost:5173) adresinde açılır.
+ [http://localhost:5173](http://localhost:5173) adresinde açılır.
 
 ---
 
-## 🔑 Varsayılan Kullanıcılar (Data Seeder)
+##  Varsayılan Kullanıcılar (Data Seeder)
 
 Sistem çalıştırıldığında **otomatik olarak** aşağıdaki kullanıcılar oluşturulur:
 
@@ -133,7 +136,7 @@ Sistem çalıştırıldığında **otomatik olarak** aşağıdaki kullanıcılar
 
 ---
 
-## Gerçekleştirilemeyen İsterler
+##  Gerçekleştirilemeyen İsterler
 
 Bu sürümde aşağıdaki iki özellik implemente edilmemiştir:
 
@@ -154,21 +157,15 @@ docker compose up -d
 docker compose down
 ```
 
----
-
 ### 2. Swagger / API Dokümantasyonu
 
 Backend API’si için **Swagger/OpenAPI** entegrasyonu eklenmiştir.
-👉 [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html)
-
----
+ [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html)
 
 ### 3. Öğretmen için Filtrelenmiş Öğrenci Listesi
 
 Öğretmenler, yalnızca **kendi derslerine kayıtlı öğrencileri** görüntüleyebilmektedir.
 Bu sayede kullanıcı deneyimi iyileştirilmiş, veri güvenliği artırılmıştır.
-
----
 
 ### 4. Clean Code Prensipleri
 
@@ -176,12 +173,11 @@ Kodlar; modülerlik, okunabilirlik ve sürdürülebilirlik ön planda tutularak 
 Servis katmanı, DTO yapısı ve Controller mimarisi düzenli bir şekilde ayrıştırılmıştır.
 
 ---
-### 5. Entity Yapısı
 
-##  Veritabanı Şeması ve İlişkileri
+##  Entity Yapısı
 
-Entity Framework Core Code-First yaklaşımı ile tasarlanan veritabanı şeması, sistemin temelini oluşturur.  
-
+Entity Framework Core Code-First yaklaşımı ile tasarlanan veritabanı şeması, sistemin temelini oluşturur.
+Varlıklar arasındaki ilişkiler akademik süreçlerin bütünlüğünü sağlar.
 
 ```mermaid
 erDiagram
@@ -191,6 +187,7 @@ erDiagram
         string PasswordHash
         enum Role
     }
+
     STUDENT {
         int Id PK
         int UserId FK
@@ -198,6 +195,7 @@ erDiagram
         string Surname
         string Number
     }
+
     TEACHER {
         int Id PK
         int UserId FK
@@ -205,23 +203,27 @@ erDiagram
         string Surname
         string Title
     }
+
     COURSE {
         int Id PK
         string Name
         enum Status
         int TeacherId FK
     }
+
     ENROLLMENT {
         int Id PK
         int CourseId FK
         int StudentId FK
     }
+
     GRADE {
         int Id PK
         int EnrollmentId FK
         decimal Score
         datetime CreatedAt
     }
+
     ATTENDANCE {
         int Id PK
         int EnrollmentId FK
@@ -237,7 +239,7 @@ erDiagram
     STUDENT ||--o{ ENROLLMENT : enrolled
     ENROLLMENT ||--o{ GRADE : receives
     ENROLLMENT ||--o{ ATTENDANCE : tracked
-
+```
 
 ---
 
